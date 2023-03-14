@@ -1,0 +1,35 @@
+<div class="title">
+  <div>
+    Total Stdandard
+    <span>{{std_list.length}}</span>
+  </div>
+  <widget-loadder *ngIf="std_list.length== 0"></widget-loadder>
+  <!-- <div class="InputBox"> -->
+    <button (click)="AddStdandard()" class="button"><p>Add&nbsp;Stdandard</p></button>
+  <!-- </div> -->
+</div>
+
+<table>
+  <tr class="header">
+    <th>#</th>
+    <th>Stdandard</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Action</th>
+  </tr>
+  <tr class="space">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tbody [@listAnimation]="std_list.length" *ngIf="std_list.length != 0">
+    <tr *ngFor="let std of std_list; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{std.name}}</td>
+      <td>{{std.startDate}}</td>
+      <td>{{std.endDate}}</td>
+      <td class="action"><img (click)="opendilog(std,i)" src="/assets/icon/edit.svg" alt=""></td>
+    </tr>
+  </tbody>
+</table>

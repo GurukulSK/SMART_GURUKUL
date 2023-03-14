@@ -1,0 +1,43 @@
+<div id="top">
+  <div class="title" title="Name">{{title}}</div>
+  <div id="right">
+    <p id="YearChange">
+      <span id="selected">
+        <span> {{ SelectedYear }}</span>
+        <img id="arrow" src="/assets/icon/arrow-up.svg" alt="" />
+        <span id="List">
+          <ul>
+            <li *ngFor="let i of YearList" (click)="YearChangeSelect(i.yearId)">
+              {{ i.yearHead }}
+            </li>
+          </ul>
+        </span>
+      </span>
+    </p>
+    <div class="hr"></div>
+    <!-- <p>
+      <img
+        id="bellImg"
+        (click)="refresh()"
+        src="/assets/icon/refresh.svg"
+        alt=""
+      />
+    </p>
+    <div class="hr"></div> -->
+    <p>
+      <img id="bellImg" src="/assets/icon/bell.svg" alt="" />
+    </p>
+    <div class="hr"></div>
+    <p>
+      <span id="UserDropdown">
+        <img src="/assets/icon/user.svg" alt="" />
+        <ul>
+          <li>Profile</li>
+          <li>Gid&nbsp;Master</li>
+          <li>Setinge</li>
+          <li (click)="LogOut()" id="logout">Log Out</li>
+        </ul>
+      </span>
+    </p>
+  </div>
+</div>

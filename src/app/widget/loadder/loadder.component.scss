@@ -1,0 +1,93 @@
+@mixin anime {
+  animation-name: my-animation;
+  animation-duration: .4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  width: 4px;
+  height: 0px;
+  border-radius: 10px;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+}
+
+
+.con {
+  height: 20px;
+  display: flex;
+  width: 15px;
+  position: relative;
+  top: -3px;
+
+  #l1 {
+    @include anime();
+  }
+
+  #l2 {
+    @include anime();
+    animation-delay: 100ms
+  }
+
+  #l3 {
+    @include anime();
+    animation-delay: 200ms
+  }
+}
+.main {
+  height: 20px;
+  display: flex;
+  width: 15px;
+  position: relative;
+  top: -3px;
+
+  #l1 {
+    @include anime();
+    animation-name: my-main-anime;
+  }
+
+  #l2 {
+    @include anime();
+    animation-name: my-main-anime;
+    animation-delay: 100ms
+  }
+
+  #l3 {
+    @include anime();
+    animation-name: my-main-anime;
+    animation-delay: 200ms
+  }
+}
+
+
+
+@keyframes my-animation {
+  from {
+    background-color: var(--color_white);
+    height: 20px;
+    top: 5px;
+  }
+
+  to {
+    background-color: var(--color_white);
+    height: 2.5px;
+    top: 12px;
+  }
+}
+@keyframes my-main-anime {
+  from {
+    background-color: var(--Primary_Color);
+    height: 20px;
+    top: 5px;
+  }
+
+  to {
+    background-color: var(--Primary_Color);
+    height: 2.5px;
+    top: 12px;
+  }
+}

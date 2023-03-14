@@ -1,0 +1,10 @@
+<app-side-navbar *ngIf="!login"></app-side-navbar>
+<div id="main" *ngIf="!login">
+  <app-top-bar></app-top-bar>
+  <div id="router">
+    <router-outlet (activate)="active()"></router-outlet>
+  </div>
+</div>
+<!-- <widget-input style="width: 50%;" icon="/assets/icon/user.svg" label="Name" [mandatory]=true placeHolder="Name"></widget-input> -->
+<!-- <widget-loadder></widget-loadder> -->
+<app-login *ngIf="login"></app-login>

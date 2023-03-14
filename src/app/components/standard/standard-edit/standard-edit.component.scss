@@ -1,0 +1,58 @@
+img {
+  width: 15px;
+}
+
+.dilog {
+  width: 1000px;
+  height: fit-content;
+  border-radius: 70px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.error {
+  margin-left: 2px;
+  font-family: var(--open_sans_regular);
+  font-size: 12px;
+}
+
+.content {
+  padding-top: 5px !important;
+}
+
+.InputBox .datepicker {
+  top: 25px !important;
+}
+
+.title {
+
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  padding-top: 10px;
+
+  p {
+    margin: 0px;
+    font-size: 15px;
+    font-family: var(--open_sans_semi_bold);
+    padding: 7px;
+    margin-left: 10px;
+  }
+
+  img {
+    margin-right: 10px;
+    width: 15px;
+    padding: 7px;
+  }
+
+  img:hover {
+    background-color: var(--border_color50);
+    border-radius: 1000px;
+  }
+}

@@ -1,0 +1,5 @@
+<label *ngIf="label != '' " for="input">Name <font *ngIf="mandatory" color = "red">*</font></label>
+<div class="input" >
+  <img src={{icon}} alt="icon">
+  <input (input)="input(inputBox.value)" #inputBox id="input" type="{{type}}" placeholder="{{placeHolder}}">
+</div>

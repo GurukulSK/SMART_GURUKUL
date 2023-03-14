@@ -1,0 +1,34 @@
+label{
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: var(--open_sans_medium);
+}
+.input{
+  display: flex;
+  border:2px solid transparent;
+  align-items: center;
+  border-radius: 8px;
+  width: 100%;
+  img{
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid var(--Primary_Color);
+    padding: 0 10px;
+  }
+  input{
+    border:2px solid transparent;
+    border-radius: 8px;
+    width: 100%;
+    padding: 7px;
+    font-family: var(--open_sans_semi_bold);
+    background-color: var(--secondaryColor);
+  }
+  background-color: var(--secondaryColor);
+}
+input:focus{
+  outline: none;
+}
+.input:focus-within{
+  border: 2px solid var(--Primary_Color);
+
+}

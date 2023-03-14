@@ -1,0 +1,40 @@
+<div class="dilog">
+  <div class="title">
+    <p>Standard</p>
+    <img (click)="onNoClick()" src="/assets/icon/close.svg" alt="" />
+  </div>
+  <div class="hr"></div>
+  <div mat-dialog-content class="content">
+    <form>
+      <div class="InputBox">
+        <label>Subject Name <font color="red" >*</font></label>
+        <input type="text" placeholder="Stdandard Name" [(ngModel)]="copy_data.name" name="name">
+      <font color="red" *ngIf="name_err" class="error">This field is required</font>
+    </div>
+    <div class="InputBox">
+      <label>Start Date<font color="red" >*</font></label>
+      <mat-datepicker-toggle class="datepicker" [for]="Editpicker"><img class="DateIcon" matDatepickerToggleIcon src="/assets/icon/date.svg" alt=""></mat-datepicker-toggle>
+      <input [matDatepicker]="Editpicker" [(ngModel)]="copy_data.startDate" name="StdrtDate">
+      <font color="red" *ngIf="startDate_err" class="error">This field is required</font>
+      <mat-datepicker #Editpicker></mat-datepicker>
+    </div>
+    <div class="InputBox">
+      <label>End Date<font color="red" >*</font></label>
+      <mat-datepicker-toggle class="datepicker" [for]="Editendpicker"><img class="DateIcon" matDatepickerToggleIcon src="/assets/icon/date.svg" alt=""></mat-datepicker-toggle>
+      <input [matDatepicker]="Editendpicker" [(ngModel)]="copy_data.endDate" name="enddate" placeholder="MM-dd-yyyy">
+      <font color="red" *ngIf="endDate_err" class="error">This field is required</font>
+      <mat-datepicker  #Editendpicker></mat-datepicker>
+    </div>
+  </form>
+  <div class="button-group">
+    <div class="InputBox">
+      <br>
+        <button class="button" (click)="AddStd()"><p *ngIf="!click">Done</p><widget-loadder *ngIf="click" [maincolor]="false" class="loadder"></widget-loadder></button>
+      </div>
+      <div class="InputBox">
+        <br>
+        <button class="button" (click)="Reset()"><p>Reset</p></button>
+      </div>
+    </div>
+  </div>
+</div>
